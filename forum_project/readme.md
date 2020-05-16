@@ -38,3 +38,11 @@
     - Crate HomePage class view extended from generic TemplateView
 5. Add url for the new view at forum/urls.py file
 6. Check result of index.html at http://127.0.0.1:8000/
+
+### 1.4 accounts app - User model, SignUp view, CreateUser form and templates
+1. Code Model at accounts/models.py file
+    - Create model User extending from django's default auth model.
+2. Code View at accounts/views.py file 
+    - add class SignUp using CreateView
+3. Create forms.py file to handle Sign Up form
+4. Create templates/accounts/login.html and signup.html. Note: templates/appname/file.html
