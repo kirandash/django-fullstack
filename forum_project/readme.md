@@ -70,3 +70,26 @@
 5. `python manage.py showmigrations`
 6. If any changes in migration files: `python manage.py migrate`
 7. `python manage.py runserver`
+
+## 2. Groups and Posts applications
+### 2.1 Setting Up Files for posts and groups app
+1. `django-admin startapp posts` and `django-admin startapp groups`
+    - Add posts, groups to INSTALLED_APPS in settings.py file.
+2. posts/
+    - Create templates/posts/ folder with following files
+        - post_base.html: base html code for post. From which other html pages will be extended.
+        - post_list.html: List view of all posts
+        - post_detail.html: Detail view of single post
+        - post_confirm_delete.html: confirm delete view for post
+        - post_form.html: View with form to create a new post
+        - user_post_list.html: View for list of posts for a user
+        - _post.html: common code that can be injected in all other html files
+    - Create urls.py file
+    - Create forms.py file
+3. groups/
+    - Create templates/groups/ folder with following files:
+        - group_base.html: base html code for group. From which other html pages will be extended
+        - group_list.html: List view of all groups
+        - group_detail.html: Detail view of single group
+        - group_form.html: View with form to create a new group
+    - Create urls.py file
