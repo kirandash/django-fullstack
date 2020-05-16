@@ -46,3 +46,18 @@
     - add class SignUp using CreateView
 3. Create forms.py file to handle Sign Up form
 4. Create templates/accounts/login.html and signup.html. Note: templates/appname/file.html
+
+### 1.5 accounts app - finishing templates
+1. From venv: **Install django-bootstrap3**: `pip install django-bootstrap3`
+    - https://pypi.org/project/django-bootstrap3/
+    - Add bootstrap3 to INSTALLED_APPS in settings.py file.
+2. Add code to signup.html.
+3. Add code to login.html.
+4. Create accounts/urls.py file to connect views we created to url paths
+
+**Connecting accounts app to project**
+1. forum/urls.py file
+    - include accounts.urls and auth urls
+2. Note: for admin interface for auth, we don't need to add anything. Since we will use Django's default auth admin interface.
+3. Finsih up by adding code to base.html
+    - Add bootstrap: https://getbootstrap.com/docs/3.3/getting-started/

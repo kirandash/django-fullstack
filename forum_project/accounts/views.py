@@ -5,7 +5,6 @@ from django.views.generic import CreateView
 
 from . import forms
 
-
 class SignUp(CreateView):
     # pass
     form_class = forms.UserCreateForm  # using UserCreateForm for SignUp view
