@@ -26,3 +26,15 @@
 5. **Crate Migrations**: `python3 manage.py makemigrations`. Note: to apply migration for specific model, run: `python3 manage.py makemigrations accounts`
 6. **Apply Migration**: `python3 manage.py migrate`.
 7. **Run server**: `python3 manage.py runserver`
+
+### 1.3 Creating Templates, View, URL for home page
+1. forum_project/templates/
+    - Create base.html file: For base templates
+    - Create index.html : For home page
+2. Add code to base.html file
+3. Extend index.html from base.html file
+4. **Create view** to link to templates.
+    - Create forum/views.py file
+    - Crate HomePage class view extended from generic TemplateView
+5. Add url for the new view at forum/urls.py file
+6. Check result of index.html at http://127.0.0.1:8000/
