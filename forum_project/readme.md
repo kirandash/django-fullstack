@@ -93,3 +93,12 @@
         - group_detail.html: Detail view of single group
         - group_form.html: View with form to create a new group
     - Create urls.py file
+
+### 2.2 Building Model for groups app and posts app
+1. Add code to groups/models.py file
+    - Add slugify
+    - Install **misaka**: from venv: `pip install misaka`: for link embedding or adding markdowns inside our post
+    - Create Group and GroupMember class
+2. Add code to posts/models.py file
+    - Add misaka for adding markdowns inside our post
+    - Create Post
