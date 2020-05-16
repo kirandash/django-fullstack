@@ -4,7 +4,7 @@ from . import views
 
 app_name = 'accounts' # Optional in latest Django 3. Can be used to access components from this app ex: accounts.urls
 
-urlPatterns = [
+urlpatterns = [
     path('login/', 
         auth_views.LoginView.as_view(template_name='accounts/login.html'), 
         name='login'), # use login.html template for login view

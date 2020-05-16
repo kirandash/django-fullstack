@@ -61,3 +61,12 @@
 2. Note: for admin interface for auth, we don't need to add anything. Since we will use Django's default auth admin interface.
 3. Finsih up by adding code to base.html
     - Add bootstrap: https://getbootstrap.com/docs/3.3/getting-started/
+
+### 1.6 accounts app - Create test and thanks page. Add Migrations
+1. settings.py file: Add LOGIN_REDIRECT_URL, LOGOUT_REDIRECT_URL
+2. Create templates for test.html and thanks.html in root templates/ folder.
+3. Add views for login, logout redirect ie test and thanks page to forum/views.py file.
+4. Link views to forum/urls.py file
+5. `python manage.py showmigrations`
+6. If any changes in migration files: `python manage.py migrate`
+7. `python manage.py runserver`
