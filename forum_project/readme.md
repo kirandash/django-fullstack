@@ -102,3 +102,12 @@
 2. Add code to posts/models.py file
     - Add misaka for adding markdowns inside our post
     - Create Post
+
+### 2.3 groups app - Creating Views, Coding templates for views
+1. groups/views.py:
+    - add class based views: CreateGroup, SingleGroup, ListGroups
+2. Connect templates with views.
+    - group_base.html
+    - goup_detail.html
+    - group_list.html
+    - group_form.html
