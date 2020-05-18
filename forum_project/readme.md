@@ -111,3 +111,9 @@
     - goup_detail.html
     - group_list.html
     - group_form.html
+
+### 2.4 groups app - connect views to URLs, register models in admin
+1. groups/urls.py
+    - Add urlpatterns for views
+2. groups/admin.py
+    - register Group model in admin
