@@ -125,3 +125,13 @@
     - Create CBVs
 2. posts/urls.py-
     - Link CBVs to urls
+
+### 3.2 posts app - Templates
+1. posts/templates/
+    - post_base.html
+    - post_form.html - for creating a new post
+    - post_list.html
+    - _post.html
+    - post_confirm_delete.html
+    - post_detail.html
+    - user_post_list.html
