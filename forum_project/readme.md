@@ -135,3 +135,9 @@
     - post_confirm_delete.html
     - post_detail.html
     - user_post_list.html
+
+### 3.3 groups app - create join and leave group views, linking views to urls
+1. groups/views.py
+    - Create CBVs for Join and Leave Group
+2. groups/urls.py
+    - link views to urls
