@@ -117,3 +117,11 @@
     - Add urlpatterns for views
 2. groups/admin.py
     - register Group model in admin
+
+## 3 posts application
+### 3.1 posts app - create views and add urlpatterns
+1. Install **braces**: helps us create mixins for CBVs: in venv: `pip install django-braces` Version: 1.14.0
+1. posts/views.py-
+    - Create CBVs
+2. posts/urls.py-
+    - Link CBVs to urls
