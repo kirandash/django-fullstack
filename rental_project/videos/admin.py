@@ -13,5 +13,7 @@ class MovieAdmin(admin.ModelAdmin): # name of model + Admin
 
     list_display = ['title', 'release_year', 'length'] # Adding Fields to list view
 
+    list_editable = ['length'] # Editable List view
+
 admin.site.register(models.Customer)
 admin.site.register(models.Movie, MovieAdmin)

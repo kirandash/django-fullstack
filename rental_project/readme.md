@@ -69,3 +69,11 @@
 1. videos/admin.py file - add fields to `list_display`.
 2. Note: the order on admin will be the order of fields in array
 3. Note: on admin, clicking the column name we can sort the items as well.
+
+### 2.8 Editable List view
+**Theory**
+1. By default we need to go to the detail view to edit any attribute value.
+
+**Code**
+1. videos/admin.py file - add fields to `list_editable`
+2. Note: all fields under list_editable must be first added to list_display. Since fields can only be edited if it is displayed.
