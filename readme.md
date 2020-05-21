@@ -1,7 +1,8 @@
 # Django FullStack Projects and Concepts
 
 ## Projects
-1. **Forum**: Forum - Using Django
+1. **Forum**: Forum - Using Django, emphasizing on Models creation
+2. **Rental**: Rental - Cutomizing Django Admin
 
 ## Notes
 1. **Configure Django Project in VSCode**: 
