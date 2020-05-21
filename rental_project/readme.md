@@ -47,3 +47,15 @@
     - Add title to search only with title
     - Add title, length to search both title or length and return any matches
 2. Note: More fields in list will tend to more search time. Thus, add fields carefully.
+
+### 2.6 Adding Filters
+**Theory:**
+1. We can also add filters for admin view of our models.
+2. Upon adding the filters, it will show on the right hand side of our view.
+3. They will also auto filter based on the data type.
+4. Note: The built in user model has default filters. We will add similar filter for our own models: movie
+
+**Code:**
+1. Add `list_filter` in videos/admin.py file.
+2. Check the filter at http://127.0.0.1:8000/admin/videos/movie/
+3. Note: it doesn't make sense to add all fields in list_filter. As it will increase the number of categories. Better to add categorical fields ex: genre.
