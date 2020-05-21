@@ -177,3 +177,8 @@
 ## 5 Adding CSS
 ### 5.1 Add CSS and JS
 1. Add js and css
+
+### 5.2 Freezing requirements
+1. `pip freeze > requirements.txt`
+2. Install with: `pip install -r requirements.txt`
+3. deactivate venv with `deactivate`
