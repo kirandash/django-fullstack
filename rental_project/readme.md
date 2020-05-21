@@ -38,11 +38,11 @@
 5. Add templates to TEMPLATES DIRS list in settings.py file.
 6. Note: Don't change functionalities with this approach. Prefer only style or layout changes.
 
-### 2.4 Ordering Fields
+### 2.4 Ordering Fields in admin detail view
 1. By default, the admin will display fields in the detail view in the same order they are defined in the model. We can change that using admin.py file.
 2. Add new class to videos/admin.py file
 
-### 2.5 Add Search to admin view pages
+### 2.5 Add Search to admin list view
 1. Add fields to `search_fields` attr to videos/admin.py file. - Test at http://127.0.0.1:8000/admin/videos/movie/
     - Add title to search only with title
     - Add title, length to search both title or length and return any matches
@@ -77,3 +77,9 @@
 **Code**
 1. videos/admin.py file - add fields to `list_editable`
 2. Note: all fields under list_editable must be first added to list_display. Since fields can only be edited if it is displayed.
+
+### 2.9 Freeze requirements
+1. Terminate server
+2. `pip freeze > requirements.txt`
+3. Requirements can be installed using: `pip install -r requirements.txt`
+4. deactivate venv: `deactivate`
