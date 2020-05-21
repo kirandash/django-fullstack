@@ -173,3 +173,7 @@
 
 ### 4.2 Debuggin - 2
 1. Fix template issues: Add missing time(created_at) and username
+
+## 5 Adding CSS
+### 5.1 Add CSS and JS
+1. Add js and css
