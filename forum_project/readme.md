@@ -170,4 +170,6 @@
 12. Test Delete Post
     - **DeletePost is missing a QuerySet. Define DeletePost.model, DeletePost.queryset, or override DeletePost.get_queryset().**: Typo model in posts/views.py
     - Confirm delete: **messages is not defined**: in posts/views.py file: `from django.contrib import messages`
-    
+
+### 4.2 Debuggin - 2
+1. Fix template issues: Add missing time(created_at) and username
