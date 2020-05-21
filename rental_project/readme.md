@@ -34,3 +34,5 @@
 2. github - django/contrib/admin/templates/admin
     - base_site.html
 3. To overwrite: create: templates/admin/base_site.html. copy, paste and overwrite. Note: Folder structure and file name must match django's structure from github
+4. Change code in base_site.html
+5. Add templates to TEMPLATES DIRS list in settings.py file.
