@@ -27,3 +27,10 @@
 5. `python manage.py runserver` - http://127.0.0.1:8000/admin
 6. Create 3 customers and movies
 7. **Add String representation** for objects in videos/models.py file using __str__() and check in admin.
+
+### 2.3 Admin Templates
+1. We will overwrite default admin templates from django. Check for template names on github
+    - https://github.com/django/django
+2. github - django/contrib/admin/templates/admin
+    - base_site.html
+3. To overwrite: create: templates/admin/base_site.html. copy, paste and overwrite. Note: Folder structure and file name must match django's structure from github
