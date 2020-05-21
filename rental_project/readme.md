@@ -36,3 +36,9 @@
 3. To overwrite: create: templates/admin/base_site.html. copy, paste and overwrite. Note: Folder structure and file name must match django's structure from github
 4. Change code in base_site.html
 5. Add templates to TEMPLATES DIRS list in settings.py file.
+6. Note: Don't change functionalities with this approach. Prefer only style or layout changes.
+
+### 2.4 Ordering Fields
+1. By default, the admin will display fields in the detail view in the same order they are defined in the model. We can change that using admin.py file.
+2. Add new class to videos/admin.py file
+
