@@ -42,3 +42,8 @@
 1. By default, the admin will display fields in the detail view in the same order they are defined in the model. We can change that using admin.py file.
 2. Add new class to videos/admin.py file
 
+### 2.5 Add Search to admin view pages
+1. Add fields to `search_fields` attr to videos/admin.py file. - Test at http://127.0.0.1:8000/admin/videos/movie/
+    - Add title to search only with title
+    - Add title, length to search both title or length and return any matches
+2. Note: More fields in list will tend to more search time. Thus, add fields carefully.
