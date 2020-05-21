@@ -16,3 +16,14 @@
 ### 2.1 videos app - setup
 1. From venv: `django-admin startapp videos` or `python manage.py videos`
 2. Add app to list of INSTALLED_APPS
+
+### 2.2 videos app - model, superuser, string representation
+1. Create Movie, Customer models in videos/models.py file
+2. Register both models in videos/admin.py file
+3. Run migrations:
+    - `python manage.py makemigrations`
+    - `python manage.py migrate`
+4. Create superuser: `python manage.py createsuperuser` - kiran, django1234
+5. `python manage.py runserver` - http://127.0.0.1:8000/admin
+6. Create 3 customers and movies
+7. **Add String representation** for objects in videos/models.py file using __str__() and check in admin.
