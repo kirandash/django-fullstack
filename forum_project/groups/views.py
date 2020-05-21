@@ -5,6 +5,7 @@ from django.urls import reverse
 from django.views import generic
 from django.shortcuts import get_object_or_404
 from groups.models import Group, GroupMember
+from . import models
 
 class CreateGroup(LoginRequiredMixin, generic.CreateView):
     fields = ('name', 'description')
@@ -43,7 +44,7 @@ class LeaveGroup(LoginRequiredMixin, generic.RedirectView):
         try:
             membership = models.GroupMember.objects.filter(
                 user=self.request.user,
-                group__slug=self.kqargs.get('slug')
+                group__slug=self.kwargs.get('slug')
             ).get()
         except models.GroupMember.DoesNotExist:
             messages.warning(self.request, 'Sorry you are not in this group')

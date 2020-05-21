@@ -10,11 +10,11 @@ from django.contrib.auth import get_user_model
 User = get_user_model() # get current logged in user
 
 class Post(models.Model):
-    user = models.ForeignKey(User, related_name='posts') # to hold user who created this post
+    user = models.ForeignKey(User, related_name='posts', on_delete=models.CASCADE) # to hold user who created this post
     created_at = models.DateTimeField(auto_now=True) # auto generated date and time
     message = models.TextField()
     message_html = models.TextField(editable=False)
-    group = models.ForeignKey(Group, related_name='posts', null=True, blank=True)
+    group = models.ForeignKey(Group, related_name='posts', null=True, blank=True, on_delete=models.CASCADE)
 
     # string representation of object
     def __str__(self):

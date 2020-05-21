@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.urls import reverse
-
+from django.urls import reverse_lazy
+from django.contrib import messages
 from django.http import Http404
 from django.views import generic
 
@@ -27,7 +27,7 @@ class UserPosts(generic.ListView):
     # On running query set for UserPost class do the following - check if user exists and fetch all the posts for that user
     def get_queryset(self):
         try:
-            self.post.user = User.objects.prefetch_related('posts').get(username__iexact=self.kwargs.get('username'))
+            self.post_user = User.objects.prefetch_related('posts').get(username__iexact=self.kwargs.get('username'))
         except User.DoesNotExist:
             raise Http404
         else:
@@ -44,7 +44,7 @@ class PostDetail(SelectRelatedMixin, generic.DetailView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        return queryset.filter(users__username__iexact=self.kwargs.get('username'))
+        return queryset.filter(user__username__iexact=self.kwargs.get('username'))
 
 class CreatePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
     fields = ('message', 'group')
@@ -58,9 +58,9 @@ class CreatePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
         return super().form_valid(form)
 
 class DeletePost(LoginRequiredMixin, SelectRelatedMixin, generic.DeleteView):
-    MODEL = models.Post
-    select_related = ('user', 'grouop')
-    success_url = reverse('posts:all') # on deleting go back to all posts
+    model = models.Post
+    select_related = ('user', 'group')
+    success_url = reverse_lazy('posts:all') # on deleting go back to all posts
 
     def get_queryset(self):
         queryset = super().get_queryset()

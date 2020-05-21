@@ -141,3 +141,33 @@
     - Create CBVs for Join and Leave Group
 2. groups/urls.py
     - link views to urls
+
+## 4 Debugging
+### 4.1 Debugging - 1
+1. Try to migrate with venv activated: `python manage.py migrate`. Fix any error that comes.
+    - Add on_delete reqd param to all ForeignKey
+2. Before migrate we must run makemigrations: `python manage.py makemigrations` or individually with app names.
+3. `python manage.py migrate`
+4. Run server: `python manage.py runserver`
+5. Test sign up and login
+6. Add navigation links in base.html to test Create Group etc
+7. Load website and check logs to fix error.
+    - Fix url syntax in base.html
+    - **'posts' is not a registered namespace**: Check if posts and create is in posts/urls.py file. If fine check project level urls.py file. Include groups and posts to forum/urls.py file.
+8. Invalid urlpattern error:
+    - forum/urls.py: make sure namespace is inside include()
+    - urls file should use path instead of urls regexp in latest django.
+    - if urlpatterns are correct, check views to see if there is any reverse code which might be creating a loop. Fix by removing reverse and add straight success url. `success_url = 'posts:all'`
+9. Test Create Group, Join Group and Leave Group
+10. Leave Group
+    - **name 'models' is not defined**: import models in groups/views.py file. Reload app
+    - **'LeaveGroup' object has no attribute 'kqargs'** Typo in groups/views.py file.
+    - Test join and leave again.
+11. Test Create Post
+    - **Cannot resolve keyword 'users' into field. Choices are: created_at, group, group_id, id, message, message_html, user, user_id**: Fix typo for user__username__iexact
+    - Fix typo in _post.html: pk=post.pk
+    - Reload app
+12. Test Delete Post
+    - **DeletePost is missing a QuerySet. Define DeletePost.model, DeletePost.queryset, or override DeletePost.get_queryset().**: Typo model in posts/views.py
+    - Confirm delete: **messages is not defined**: in posts/views.py file: `from django.contrib import messages`
+    

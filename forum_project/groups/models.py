@@ -38,8 +38,8 @@ class Group(models.Model):
 
 # Group Member Model to help us connect to a group and a user
 class GroupMember(models.Model):
-    group = models.ForeignKey(Group, related_name='memberships') # to indicate which groups this member belongs to
-    user = models.ForeignKey(User, related_name='user_groups') # to hold various groups that a user can belong to
+    group = models.ForeignKey(Group, related_name='memberships', on_delete=models.CASCADE) # to indicate which groups this member belongs to
+    user = models.ForeignKey(User, related_name='user_groups', on_delete=models.CASCADE) # to hold various groups that a user can belong to
 
     # string representation of object
     def __str__(self):

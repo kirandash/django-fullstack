@@ -1,4 +1,4 @@
-from django.urls import path, url
+from django.urls import path
 from . import views
 
 app_name = 'groups'
@@ -6,7 +6,7 @@ app_name = 'groups'
 urlpatterns = [
     path('', views.ListGroups.as_view(), name='all'),
     path('create/', views.CreateGroup.as_view(), name='create'),
-    url(r'posts/in/(?P<slug>[-\w]+)/$', views.SingleGroup.as_view(), name='single'), # slugify group name
-    url(r'join/(?P<slug>[-\w]+)/$', views.JoinGroup.as_view(), name='join'),
-    url(r'leave/(?P<slug>[-\w]+)/$', views.LeaveGroup.as_view(), name='leave'),
+    path('posts/in/<slug>/', views.SingleGroup.as_view(), name='single'), # slugify group name
+    path('join/<slug>/', views.JoinGroup.as_view(), name='join'),
+    path('leave/<slug>/', views.LeaveGroup.as_view(), name='leave'),
 ]
