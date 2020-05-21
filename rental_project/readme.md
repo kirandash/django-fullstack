@@ -48,7 +48,7 @@
     - Add title, length to search both title or length and return any matches
 2. Note: More fields in list will tend to more search time. Thus, add fields carefully.
 
-### 2.6 Adding Filters
+### 2.6 Adding Filters to list view
 **Theory:**
 1. We can also add filters for admin view of our models.
 2. Upon adding the filters, it will show on the right hand side of our view.
@@ -59,3 +59,13 @@
 1. Add `list_filter` in videos/admin.py file.
 2. Check the filter at http://127.0.0.1:8000/admin/videos/movie/
 3. Note: it doesn't make sense to add all fields in list_filter. As it will increase the number of categories. Better to add categorical fields ex: genre.
+
+### 2.7 Adding Fields to list view
+**Theory**
+1. By default, on the list view: we can only see one field of our models in the list view on the admin.
+2. We can add in more fields to view and order by.
+
+**Code**
+1. videos/admin.py file - add fields to `list_display`.
+2. Note: the order on admin will be the order of fields in array
+3. Note: on admin, clicking the column name we can sort the items as well.
