@@ -11,3 +11,8 @@
 4. **Create Project**:
     - `django-admin startproject rental`
     - Rename main folder to rental_project to avoid confusion with another folder with same name.
+
+## 2. Apps Creation
+### 2.1 videos app - setup
+1. From venv: `django-admin startapp videos` or `python manage.py videos`
+2. Add app to list of INSTALLED_APPS
