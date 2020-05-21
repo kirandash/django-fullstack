@@ -142,8 +142,8 @@
 2. groups/urls.py
     - link views to urls
 
-## 4 Debugging
-### 4.1 Debugging - 1
+## 4 Manual Debugging
+### 4.1 Manual Code Debugging - 1
 1. Try to migrate with venv activated: `python manage.py migrate`. Fix any error that comes.
     - Add on_delete reqd param to all ForeignKey
 2. Before migrate we must run makemigrations: `python manage.py makemigrations` or individually with app names.
@@ -171,7 +171,7 @@
     - **DeletePost is missing a QuerySet. Define DeletePost.model, DeletePost.queryset, or override DeletePost.get_queryset().**: Typo model in posts/views.py
     - Confirm delete: **messages is not defined**: in posts/views.py file: `from django.contrib import messages`
 
-### 4.2 Debuggin - 2
+### 4.2 Manual code Debuggin - 2
 1. Fix template issues: Add missing time(created_at) and username
 
 ## 5 Adding CSS
@@ -179,6 +179,25 @@
 1. Add js and css
 
 ### 5.2 Freezing requirements
+1. `pip freeze > requirements.txt`
+2. Install with: `pip install -r requirements.txt`
+3. deactivate venv with `deactivate`
+
+## 6. Debugging with Django Debug ToolBar
+### 6.1 Install
+1. From venv run: `pip install django-debug-toolbar`. Already installed.
+2. Add to INSTALLED_APPS list in settings.py file. `debug_toolbar` after `django.contrib.staticfiles`
+3. **Note**: Apps in INSTALLED_APPS are loaded based on order. Make sure to arrange dependencies accordingly. Order rules:
+    - 1. Default django apps
+    - 2. Debugger
+    - 3. Apps downloaded from external sources
+    - 4. Apps created by us
+4. Add `__debug__` url to project level urls: forum/urls.py file.
+5. Add `debug_toolbar` to middleware in settings.py file
+6. Add INTERNAL_IPS to settings.py file. To make sure that debugger runs only locally
+7. Now on loading the website, we will be able to see django-debug-toolbar on right.
+
+**Freezing requirements**
 1. `pip freeze > requirements.txt`
 2. Install with: `pip install -r requirements.txt`
 3. deactivate venv with `deactivate`
