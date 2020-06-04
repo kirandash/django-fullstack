@@ -33,3 +33,7 @@
 2. **Steps to run python File**:
     - `cd python/basics/`
     - `python3 01_numbers.py`: Note: mac has both python 2 and 3 installed. Thus, mentioning explicitly to use python3.
+    
+### 2.2 Strings
+1. Strings in Python are used to hold text information and are indicated with the use of single or double quotes.
+2. basics/02_strings.py
