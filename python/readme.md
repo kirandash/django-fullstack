@@ -44,3 +44,10 @@
 3. Run: 
     - `cd python/basics/`
     - `python3 03_lists.py`
+
+### 2.4 Dictionaries
+1. Dictionaries are Python's version of Hash tables (Objects in JS)
+2. Dictionaries allows us to create a mapping with key value pair.
+3. Dictionaries doesn't retain any order.
+4. Run:
+    - `python3 04_dictionaries.py`
