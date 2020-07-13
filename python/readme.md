@@ -37,3 +37,10 @@
 ### 2.2 Strings
 1. Strings in Python are used to hold text information and are indicated with the use of single or double quotes.
 2. basics/02_strings.py
+
+### 2.3 Lists
+1. Lists are Python's version of Arrays.
+2. They behave similarly to JS Array.
+3. Run: 
+    - `cd python/basics/`
+    - `python3 03_lists.py`
