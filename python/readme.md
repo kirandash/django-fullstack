@@ -51,3 +51,8 @@
 3. Dictionaries doesn't retain any order.
 4. Run:
     - `python3 04_dictionaries.py`
+
+### 2.5 Tuples, Sets and Booleans
+1. Tuples are immutable sequences
+2. Sets are unordered collections of unique elements.
+3. Booleans are just True / False statements
